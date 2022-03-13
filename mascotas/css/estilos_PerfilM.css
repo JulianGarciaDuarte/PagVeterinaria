@@ -20,7 +20,7 @@ body{
 
 /*----------------------------------------------------------BARRA DE NAVEGACION-------------------------------------*/
 img.logo{
-	float-left;
+	/*float-left;*/
 	height: 80px;
 	width: 80px;
 	margin-top: -20px;

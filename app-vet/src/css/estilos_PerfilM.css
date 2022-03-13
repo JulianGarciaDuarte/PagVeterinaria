@@ -12,6 +12,9 @@ body{
 
 }
 
+.main-container{
+    display: flex;
+}
 
 .container{
 	height: 100%;
@@ -166,3 +169,24 @@ hr .new1 {
     background-color: #ccc;
 }
 /*----------------------------------------Historia Clinica----------------------------*/
+
+.right_sided{
+    display: inline;
+}
+.hc_box{
+    width:auto;
+    border:#545454;
+    border-style: solid;
+    border-width: 10px;
+    background-color: rgba(217, 0, 255, 0.2);
+}
+
+.full-width{
+    width: 100%;
+    padding: 25px 50px 0px;
+}
+.boton-ver{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+

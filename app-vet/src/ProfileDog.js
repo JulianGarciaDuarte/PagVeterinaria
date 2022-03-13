@@ -24,42 +24,6 @@ export default function ProfileDog(){
                 <div className=" px-2 rounded mt-4 date "> <span className="join">Joined May,2021</span> </div>
             </div>
         </div>
-
-
-
-        
-
-        <div className="col-md-4">
-        <div className="medio">
-            
-            <img src="./imgs/Camioneta1- Toyota RAV4.jpg" style={{width: "100%", height: "100%"}}/>
-            
-        </div>
-        </div>  
-
-
-
-        <div className="col-md-4">
-        <div className="derecha">
-
-            <div className="nombres">
-            <h3> Ficha Tecnica</h3>
-
-            </div>
-
-            <div className="cuerpo">
-            <p>Con su potente presencia y un diseño sofisticado, este vehículo inspira a la
-            aventura. Su énfasis en la parrilla robusta aumenta la aerodinámica del
-            vehículo y su capacidad de refrigeración del motor, sus faros han sido diseñados
-            en contraste con la parrilla dando una apariencia de elegancia y sofisticación.
-            Sus líneas exteriores le dan mayor realce de elegancia y look deportivo.</p>
-            </div>
-            <div className="comprar">
-            <h2>COMPRAR</h2>
-            <button><i className="fas fa-dollar-sign"></i>105.000.000</button>
-            </div>
-        </div>
-        </div>
     </div>
     </div>
     </main>

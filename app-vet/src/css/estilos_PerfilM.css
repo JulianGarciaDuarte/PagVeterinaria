@@ -180,10 +180,8 @@ hr .new1 {
     border-width: 10px;
     background-color: rgba(217, 0, 255, 0.2);
 }
-
-.full-width{
-    width: 100%;
-    padding: 25px 50px 0px;
+.titulo-principal{
+    margin-left: 20px;
 }
 .boton-ver{
     padding-left: 10px;
@@ -193,19 +191,34 @@ hr .new1 {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.condiciones{
-    width:100%;
+.outer-container{
+    width:auto;
     margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 50px;
 }
-.text-condiciones{
+.inner-content{
     padding: 20px 20px 20px 20px;
     font-weight: lighter;
     background-color: lightgreen;
     border-radius: 0px 10px 10px 10px;
+    width:100%;
 }
-.titulo-condiciones{
+.titulo-seccion{
     color: green;
     background-color: lightgreen;
     border-radius: 10px 10px 0px 0px;
     padding: 5px 10px 10px 10px;
+}
+
+table th{
+    padding: 20px 20px 10px 20px;
+}
+table td{
+    padding: 5px 20px 5px 20px;
+}
+table thead{
+    border-bottom: green solid 2px;
+    background-color: lightgreen;
+
 }

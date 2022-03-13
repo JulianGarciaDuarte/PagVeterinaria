@@ -12,14 +12,14 @@ export default function HistoriaClinica(){
 
         return(
         <div id="tabla-reportes" className="full-width">
-            <h3 className='titulo'>Historia Clinica</h3>
-            <div className='condiciones'>
-                <b className="titulo-condiciones"> Condiciones Diagnosticadas</b>
-                <p className="text-condiciones">{condiciones}</p>
+            <h3 className='titulo-principal'>Historia Clinica</h3>
+            <div className='outer-container'>
+                <b className="titulo-seccion"> Condiciones Diagnosticadas</b>
+                <p className="inner-content">{condiciones}</p>
             </div>
 
-            <div><p>Lista de Revisiones</p>
-                <table className="full-width">
+            <div className="outer-container"><b className="titulo-seccion">Lista de Revisiones</b>
+                <table className="full-width inner-content">
                     <thead>
                     <tr>
                         <th>Veterinario</th>

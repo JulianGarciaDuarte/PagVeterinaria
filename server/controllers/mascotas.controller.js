@@ -29,34 +29,59 @@ const getTipo = async(req=request, res=response) =>{
 const registrarMascota = async(req=request, res=response)=>{
 
     try {
-        
+
+        const {nombre, fechaNacimiento, genero, tipoId, dueñoId, razaId} = req.body;
+        const mascota = await prisma.mascota.create({
+            data:{
+                nombre,
+                fechaNacimiento:new Date(fechaNacimiento),
+                genero,
+                tipoId,
+                dueñoId,
+                razaId
+            }
+        })
+        res.status(201).json({
+            ok:true,
+            msg:"Perro creado",
+            mascota
+        })
     } catch (error) {
         
     }
 }
 
 /**
- * Método encargado para agregar una mascota
+ * Método encargado de obtener las mascotas registradas en el sistema
  * @param {*} req 
  * @param {*} res 
  */
-const agregarMascota = async(req=request, res=response)=>{
+const getMascotas = async(req=request, res=response) =>{
 
     try {
 
-        const {} = req.body;
+        const [numero, mascotas] = await Promise.all([
+            prisma.mascota.count(),
+            prisma.mascota.findMany()
+        ])
+
+        res.status(200).json({
+            ok:true,
+            numero,
+            mascotas       
+        })
         
     } catch (error) {
-
+        console.log(error);
         res.status(500).json({
             ok:false,
-            msg:'Error, hable con el administrador'
-        });
-        
+            msg:"Error, hable con el administrador"
+        })
     }
 }
 
-
 module.exports = {
-    getTipo
+    getTipo,
+    registrarMascota,
+    getMascotas
 }

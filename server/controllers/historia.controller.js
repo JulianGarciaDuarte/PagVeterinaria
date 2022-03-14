@@ -9,9 +9,12 @@ const {request, response} = require('express');
 const crearHistoria = async(req=request, res=response) =>{
 
     try {
+        
+        const {} = req.body;
 
         
     } catch (error) {
+        console.log(error);
         res.status(500).json({
             ok:false,
             msg:'Error, hable con el administrador'

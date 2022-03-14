@@ -9,7 +9,7 @@ const {request, response} = require('express');
 const crearHistoria = async(req=request, res=response) =>{
 
     try {
-        
+
         const {} = req.body;
 
         
@@ -21,4 +21,8 @@ const crearHistoria = async(req=request, res=response) =>{
         });
     }
 
+}
+
+module.exports = {
+    crearHistoria
 }

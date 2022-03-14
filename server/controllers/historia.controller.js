@@ -1,5 +1,5 @@
 const {request, response} = require('express');
-
+const {prisma} = require('../db/prisma');
 
 /**
  * método encargado de crear una historia clinica
@@ -10,7 +10,19 @@ const crearHistoria = async(req=request, res=response) =>{
 
     try {
 
-        const {} = req.body;
+        const {mascotaId} = req.body;
+
+        const historia = await prisma.historia.create({
+            data:{
+                mascotaId
+            }
+        });
+
+        res.status(201).json({
+            ok:true,
+            msg:"Historia clínica creada",
+            historia
+        })
 
         
     } catch (error) {

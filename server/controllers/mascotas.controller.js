@@ -1,7 +1,11 @@
 const {request, response} = require('express');
 const {prisma} = require('../db/prisma');
 
-
+/**
+ * Obtener los tipos
+ * @param {*} req 
+ * @param {*} res 
+ */
 const getTipo = async(req=request, res=response) =>{
 
     try {

@@ -74,6 +74,7 @@ model Visita {
   id          Int      @id @default(autoincrement())
   fecha       DateTime @default(now())
   descripcion String
+  formula     String
   historia    Historia @relation(fields: [historiaId], references: [id])
   historiaId  Int
 }

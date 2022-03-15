@@ -34,24 +34,28 @@ const registrarMascota = async(req=request, res=response)=>{
 
     try {
 
-        const {nombre, fechaNacimiento, genero, tipoId, dueñoId, razaId} = req.body;
+        const {nombre, fechaNacimiento, genero, tipoId, usuarioId, razaId} = req.body;
         const mascota = await prisma.mascota.create({
             data:{
                 nombre,
                 fechaNacimiento:new Date(fechaNacimiento),
                 genero,
                 tipoId,
-                dueñoId,
-                razaId
+                razaId,
+                usuarioId
             }
-        })
+        });
         res.status(201).json({
             ok:true,
             msg:"Perro creado",
             mascota
-        })
+        });
     } catch (error) {
-        
+        console.log(error);
+        res.status(500).json({
+            ok:false,
+            msg:'Error, hable con el administrador'
+        })
     }
 }
 
@@ -66,7 +70,12 @@ const getMascotas = async(req=request, res=response) =>{
 
         const [numero, mascotas] = await Promise.all([
             prisma.mascota.count(),
-            prisma.mascota.findMany()
+            prisma.mascota.findMany({
+                include:{
+                    raza:true,
+                    tipo:true
+                }
+            })
         ])
 
         res.status(200).json({

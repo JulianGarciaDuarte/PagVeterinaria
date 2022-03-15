@@ -4,7 +4,7 @@ const {prisma} = require('../db/prisma');
 /**
  * método encargado de crear una historia clinica
  * @param {*} req 
- * @param {*} resp 
+ * @param {*} res
  */
 const crearHistoria = async(req=request, res=response) =>{
 

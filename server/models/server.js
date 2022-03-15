@@ -15,7 +15,8 @@ class Server{
         this.middlewares();
         this.path = {
             mascotas:"/api/mascotas",
-            historia:"/api/historia"
+            historia:"/api/historia",
+            tipo:"/api/tipoMascota"
         }
         this.routes();
     
@@ -27,9 +28,11 @@ class Server{
     routes(){
         this.app.use(this.path.mascotas, require('../routes/mascotas.routes'));
         this.app.use(this.path.historia, require('../routes/historia.routes'));
+        this.app.use(this.path.tipo, require('../routes/tipo.routes'));
     }
 
     middlewares(){
+        
         this.app.use(cors());
         this.app.use(express.json());
         this.app.use(morgan('dev'));

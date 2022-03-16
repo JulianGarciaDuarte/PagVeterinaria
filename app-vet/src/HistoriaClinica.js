@@ -1,5 +1,6 @@
 import React from 'react'
 import logo_perro from './imgs/Logo2.png'
+import './css/estilos_PerfilM.css';
 
 let filas = [["Carlos Restrepo", "12-02-2022"],
 ["Gustavo Petro", "12-01-2022"],

@@ -9,11 +9,11 @@ body{
     background: url(8-85556_silver-mat-color.jpg) no-repeat center top;
     */
     background-size: cover;
-
 }
 
 .main-container{
     display: flex;
+    background-color: white;
 }
 
 .container{
@@ -182,6 +182,9 @@ hr .new1 {
 }
 .titulo-principal{
     margin-left: 20px;
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .boton-ver{
     padding-left: 10px;

@@ -1,5 +1,3 @@
-
-
 const cors = require('cors');
 const morgan = require('morgan');
 const express = require('express');
@@ -14,9 +12,12 @@ class Server{
         this.conectarDB();
         this.middlewares();
         this.path = {
+            users:"/api/users",
+            auth:"/api/auth",
             mascotas:"/api/mascotas",
             historia:"/api/historia",
-            tipo:"/api/tipoMascota"
+            tipo:"/api/tipoMascota",
+            veterinarias:"/api/veterinaria"
         }
         this.routes();
     
@@ -26,6 +27,10 @@ class Server{
      * Método encargado de gestionar las rutas de la rest API
      */
     routes(){
+
+        this.app.use(this.path.veterinarias, require('../routes/veterinaria.routes'));
+        this.app.use(this.path.auth , require('../routes/auth.routes'));
+        this.app.use(this.path.users, require('../routes/users.routes'));
         this.app.use(this.path.mascotas, require('../routes/mascotas.routes'));
         this.app.use(this.path.historia, require('../routes/historia.routes'));
         this.app.use(this.path.tipo, require('../routes/tipo.routes'));

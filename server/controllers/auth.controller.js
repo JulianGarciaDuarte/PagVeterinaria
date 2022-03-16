@@ -1,4 +1,5 @@
-const Usuario = require('../models/usuario');
+const bcryptjs = require('bcryptjs');
+
 const { generarJWT } = require('../helpers/jwt');
 const { prisma } = require('../db/prisma');
 
@@ -28,8 +29,8 @@ const loginUsuario = async(req=request, res=response)=>{
             })
         }
 
-        const validPassword = bcryptjs.compareSync( password, usuario.password);
-
+        const validPassword = bcryptjs.compareSync( JSON.stringify(password) , usuario.password);
+        
         if(! validPassword){
 
             return res.status(400).json({
@@ -40,11 +41,11 @@ const loginUsuario = async(req=request, res=response)=>{
 
         const token = await generarJWT(usuario.id, usuario.nombre);
 
-        return res.json({
+        return res.status(201).json({
             ok:true,
-            uid:dbUser.id,
-            name: dbUser.nombre,
-            email:dbUser.email,
+            uid:usuario.id,
+            name:usuario.nombre,
+            email:usuario.email,
             token
         })
 
@@ -53,7 +54,7 @@ const loginUsuario = async(req=request, res=response)=>{
         console.log(error);
         return res.status(500).json({
             ok:false,
-            msg:' Hable con el administrador'
+            msg:' Error, hable con el administrador'
         })
         
     }
@@ -63,27 +64,6 @@ const loginUsuario = async(req=request, res=response)=>{
 
 
 
-const revalidarToken = async(req=request, res=response)=>{
-    const {uid} = req;
-
-    //leer la base de datos
-    const dbUser = await Usuario.findById(uid);
-
-    //generar token 
-    const token = await generarJWT( uid, dbUser.nombre);
-
-    return res.json({
-        ok: true,
-        uid,
-        name: dbUser.nombre,
-        email: dbUser.email,
-        token
-    })
-
-}
-
-
 module.exports = {
-    loginUsuario,
-    revalidarToken
+    loginUsuario
 }

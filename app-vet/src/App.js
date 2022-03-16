@@ -6,12 +6,7 @@ import HistoriaClinica from './HistoriaClinica';
 function App() {
   return (
     <>
-      <AnunciosBar/>
-      <NavBar/>
-      <div className="main-container">
-      <ProfileDog/>
-      <HistoriaClinica/>
-      </div>
+      <p>hola</p>
     </>
   )
 }

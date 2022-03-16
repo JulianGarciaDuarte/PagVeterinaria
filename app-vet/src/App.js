@@ -7,18 +7,7 @@ import Footer from './Footer';
 function App() {
   return (
     <>
-      <AnunciosBar/>
-      <NavBar_M/>  
-      <NavBar/>
-      <main>
-      <div className="container-fluid">
-      <div class="row">
-      <ProfileDog/>
-      <HistoriaClinica/>
-      <Footer/>
-      </div>
-      </div>
-      </main>
+      <p>hola</p>
     </>
   )
 }

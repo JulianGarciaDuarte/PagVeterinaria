@@ -20,7 +20,7 @@ model Raza {
 
 model Veterinaria {
   id        Int       @id @default(autoincrement())
-  nombre    String    @unique
+  nombre    String
   ubicacion String
   Usuario   Usuario[]
 }
@@ -31,14 +31,13 @@ model Mascota {
   nombre          String
   fechaNacimiento DateTime    @default(now())
   genero          Genero
-  Historia        Historia[]
+  historia        Historia?
   tipo            TipoMascota @relation(fields: [tipoId], references: [id])
   tipoId          Int
   usuario         Usuario     @relation(fields: [usuarioId], references: [id])
   usuarioId       Int
   raza            Raza        @relation(fields: [razaId], references: [id])
   razaId          Int
-
 }
 
 model TipoMascota {
@@ -66,16 +65,16 @@ model Usuario {
 model Historia {
   id            Int      @id @default(autoincrement())
   fechaCreacion DateTime @default(now())
-  mascota       Mascota  @relation(fields: [mascotaId], references: id)
-  mascotaId     Int
-
-  Visita Visita[]
+  mascota       Mascota  @relation(fields: [mascotaId], references: [id])
+  mascotaId     Int      @unique
+  Visita        Visita[]
 }
 
 model Visita {
   id          Int      @id @default(autoincrement())
   fecha       DateTime @default(now())
   descripcion String
+  formula     String
   historia    Historia @relation(fields: [historiaId], references: [id])
   historiaId  Int
 }

@@ -9,11 +9,11 @@ body{
     background: url(8-85556_silver-mat-color.jpg) no-repeat center top;
     */
     background-size: cover;
-
 }
 
 .main-container{
     display: flex;
+    background-color: white;
 }
 
 .container{
@@ -84,8 +84,8 @@ a.dropdown-item{
 	color:black;
 }
 
-
 .dropdown-item a:hover {
+
      color: blue !important;
      cursor: pointer;
  }
@@ -189,14 +189,38 @@ hr .new1 {
     border-width: 10px;
     background-color: rgba(217, 0, 255, 0.2);
 }
-
-.full-width{
-    width: 100%;
-    padding: 25px 50px 0px;
+.titulo-principal{
+    margin-left: 20px;
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .boton-ver{
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.table-row{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.outer-container{
+    width:auto;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 50px;
+}
+.inner-content{
+    padding: 20px 20px 20px 20px;
+    font-weight: lighter;
+    background-color: lightgreen;
+    border-radius: 0px 10px 10px 10px;
+    width:100%;
+}
+.titulo-seccion{
+    color: green;
+    background-color: lightgreen;
+    border-radius: 10px 10px 0px 0px;
+    padding: 5px 10px 10px 10px;
 }
 
 /*----------------------------------------Footer----------------------------*/
@@ -266,4 +290,15 @@ a:link{
 
 a:hover{
 	 text-decoration: underline;
+}
+table th{
+    padding: 20px 20px 10px 20px;
+}
+table td{
+    padding: 5px 20px 5px 20px;
+}
+table thead{
+    border-bottom: green solid 2px;
+    background-color: lightgreen;
+
 }

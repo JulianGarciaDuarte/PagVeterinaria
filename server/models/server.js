@@ -14,22 +14,33 @@ class Server{
         this.conectarDB();
         this.middlewares();
         this.path = {
-            mascotas:"/api/mascotas"
+            mascotas:"/api/mascotas",
+            historia:"/api/historia",
+            tipo:"/api/tipoMascota"
         }
         this.routes();
     
     }
     
+    /**
+     * Método encargado de gestionar las rutas de la rest API
+     */
     routes(){
         this.app.use(this.path.mascotas, require('../routes/mascotas.routes'));
+        this.app.use(this.path.historia, require('../routes/historia.routes'));
+        this.app.use(this.path.tipo, require('../routes/tipo.routes'));
     }
 
     middlewares(){
+        
         this.app.use(cors());
         this.app.use(express.json());
         this.app.use(morgan('dev'));
     }
 
+    /**
+     * Método encargado de iniciar el servidor
+     */
     start(){
         this.app.listen(this.port, ()=>{
             console.log(`Servidor ejecutandose en el puerto http://localhost:${this.port}`)

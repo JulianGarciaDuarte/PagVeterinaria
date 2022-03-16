@@ -4,10 +4,6 @@ import logo_perro from './imgs/Logo2.png'
 
 export default function ProfileDog(){
     return (
-    <main className="principal">
-    <div className="container-fluid">
-
-        <div className="row">
             
             <div className="card p-4 " style={{width:"450px"}}>
 
@@ -24,8 +20,6 @@ export default function ProfileDog(){
                 <div className=" px-2 rounded mt-4 date "> <span className="join">Joined May,2021</span> </div>
             </div>
         </div>
-    </div>
-    </div>
-    </main>
+ 
     )
 }

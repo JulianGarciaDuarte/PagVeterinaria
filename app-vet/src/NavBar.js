@@ -1,10 +1,12 @@
 import React from 'react'
-import navBarImg from './imgs/nav_bar5.jpg'
 import logo4 from './imgs/Logo4.png'
 import 'bootstrap'
 export default function NavBar(){
     return(
-        <nav className="navbar navbar-expand-sm  sticky-top justify-content-center">
+
+   
+
+        <nav className="navbar navbar-expand-sm  sticky-top justify-content-center" id="nav_pc">
         <a className="navbar-brand" href="">
             <img src={logo4}  className="logo" />
         </a>
@@ -42,6 +44,10 @@ export default function NavBar(){
         </ul>
 
         </nav>
+
+
+
+    
 
     )   
 }

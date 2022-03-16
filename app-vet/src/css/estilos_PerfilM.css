@@ -24,6 +24,15 @@ body{
 }
 
 /*----------------------------------------------------------BARRA DE NAVEGACION-------------------------------------*/
+@media screen and (max-width: 580px) {
+    #nav_pc { display:none; }
+}
+
+@media screen and (min-width: 580px) {
+    #nav_m {display:none; }
+}
+
+
 img.logo{
 	/**float-left;*/
     
@@ -190,3 +199,71 @@ hr .new1 {
     margin-right: 10px;
 }
 
+/*----------------------------------------Footer----------------------------*/
+#imgfooter{
+	height:40px;
+	width: 35px;
+	margin-right: 5px;
+
+}
+
+footer{
+	background: #333;
+	color:white;
+    display: block;
+
+}
+
+.piepag{
+	margin:auto;
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+}
+
+
+.columna1 h2{
+	font-size:20px;
+	margin-top:0;
+
+}
+
+.columna1 p{
+	font-size:15px;
+	color:white;
+	margin-top:20px;
+}
+
+.columna2{
+	margin-top: 10px;
+
+	margin-right: 50px;
+}
+
+.columna2 h2{
+	font-size:20px;
+
+}
+
+.columna2 a{
+	color:white;
+}
+.columna2.row{
+	margin-top: 20px;
+	display:flex;
+	margin-right: 10px;
+}
+
+.columna3 h2{
+	font-size:20px;
+	margin-right: 50px;
+	margin-top: 0;
+}
+
+a:link{
+	 text-decoration: none;
+}
+
+a:hover{
+	 text-decoration: underline;
+}

@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function HistoriaClinica(){
     return(
+        <div className="col-md-8">
         <div className="full-width">
             <p className='titulo'>Historia Clinica</p>
             <div className='col-m4 hc_box'>
@@ -23,6 +24,7 @@ export default function HistoriaClinica(){
                     </tr>
                 </table>
             </div>
+         </div>
         </div>
     )
 }

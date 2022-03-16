@@ -5,12 +5,14 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import HistoriaClinica from './HistoriaClinica';
 import AnunciosBar from './AnunciosBar';
 import NavBar from './NavBar';
+import Footer from './Footer';
 
 ReactDOM.render(
   <React.StrictMode>
     <AnunciosBar/>
     <NavBar/>
     <HistoriaClinica/>
+    <Footer/>
   </React.StrictMode>,
   document.getElementById('root')
 );

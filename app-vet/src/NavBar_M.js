@@ -5,7 +5,7 @@ export default function NavBar_M(){
     return(
 
 <nav class="navbar navbar-expand-sm navbar-light bg-lignt" id="nav_m">
-  <div class="container-fluid">
+ 
     <a class="navbar-brand" href="#">
      <img src={logo4}  class="logo" />
     </a>
@@ -47,7 +47,7 @@ export default function NavBar_M(){
     </li>
       </ul>
     </div>
-  </div>
+
 </nav>
 
 

@@ -5,15 +5,14 @@
 }
 
 body{
-    /*
-    background: url(8-85556_silver-mat-color.jpg) no-repeat center top;
-    */
+
+    background-color: green;
     background-size: cover;
 }
 
 .main-container{
     display: flex;
-    background-color: white;
+    background-color: black;
     padding-bottom: 50px;
 }
 
@@ -22,6 +21,33 @@ body{
 	width:100%;
 	align-items: center;
 	
+}
+
+
+.container-fluid{
+	height: 100%;
+	width:100%;
+	align-items: center;
+    background-color: white;
+	
+}
+
+
+
+#Anucios{
+    background-color: lightgreen;
+    background-image: url(../imgs/Anucios_2.jpg);
+    background-size: 300px 125px;
+    height: 125px;
+    width: 100%;
+}
+
+#logo{
+    width: 325px; 
+    height:110px;
+    margin-top: 10px; 
+    margin-left: 10px;
+
 }
 
 /*----------------------------------------------------------BARRA DE NAVEGACION-------------------------------------*/
@@ -178,6 +204,50 @@ hr .new1 {
 .date {
     background-color: #ccc;
 }
+
+/*----------------------------------------HOME----------------------------*/
+
+#imgI{
+    height: 500px;
+}
+
+.barraiz{
+	background-color:lightgreen;
+	height: 550px;
+	text-align: center;
+	height: 500px;
+    margin-bottom: 20px;
+}
+
+.barraiz h5{
+    color:black;
+     text-align: center;
+   font-family: 'Courier New',times,san serif;
+   font-size: 28px;
+   margin-left: 5px;
+   margin-right: 5px;
+
+}
+
+.barraiz h3{
+    color:black;
+     text-align: center;
+   font-family: 'Courier New',times,san serif;
+   font-size: 18px;
+   margin-left: 5px;
+   margin-right: 5px;
+   margin-top: 50px;
+}
+
+
+#index_4{
+    width: 100%; 
+    height:100%; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
 /*----------------------------------------Historia Clinica----------------------------*/
 
 .right_sided{

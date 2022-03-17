@@ -4,7 +4,7 @@ import logo from './imgs/Anucios_10.png'
 export default function AnunciosBar(){
     return(
 <div  id="Anucios">
-  <div class="row">
+
 
     <div class="col-md-4">
       <div class="medio">
@@ -14,7 +14,7 @@ export default function AnunciosBar(){
       </div>
     </div>  
 
-  </div>
+
 
 </div>
     );

@@ -5,7 +5,7 @@ export default function NavBar_M(){
     return(
 
 <nav class="navbar navbar-expand-sm navbar-light bg-lignt" id="nav_m">
- 
+
     <a class="navbar-brand" href="#">
      <img src={logo4}  class="logo" />
     </a>

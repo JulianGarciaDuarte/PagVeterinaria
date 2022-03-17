@@ -11,13 +11,21 @@ import Footer from './Footer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <body>
+
     <AnunciosBar/>
-    <NavBar/>
     <NavBar_M/>
-    <Home/>
-    <Footer/>
-    </body>
+    <NavBar/>
+    <main>
+      <div className="container-fluid">
+      <div class="row">
+
+      <Home/>
+      <Footer/>
+      
+      </div>
+      </div>
+      </main>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

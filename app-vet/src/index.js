@@ -7,6 +7,7 @@ import AnunciosBar from './AnunciosBar';
 import NavBar from './NavBar';
 import NavBar_M from './NavBar_M';
 import Footer from './Footer';
+import LogIn from './LogIn';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 ReactDOM.render(
@@ -17,6 +18,7 @@ ReactDOM.render(
     <NavBar_M/>
     <Routes>
     <Route path='/HistoriaClinica' element={<HistoriaClinica/>}/>
+    <Route path='/LogIn' element={<LogIn/>}/>
     </Routes>
     </BrowserRouter>
     <Footer/>

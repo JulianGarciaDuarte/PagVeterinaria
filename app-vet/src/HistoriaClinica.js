@@ -12,7 +12,7 @@ let filas = [["Carlos Restrepo", "12-02-2022"],
 let condiciones = "When NIRCam reaches 120 kelvins (approximately -244 degrees Fahrenheit, or -153 degrees Celsius), Webb’s optics team will be ready to begin meticulously moving the 18 primary mirror segments to form a single mirror surface. The team has selected the star HD 84406 as its target to begin this process. It will be the first object NIRCam “sees” when photons of light hit the instrument’s powered-on detectors. The process will essentially create an image of 18 random, blurry points of light. For the first few weeks of mirror alignment, the team will keep the instrument trained on the star while they make microscopic adjustments to the mirror segments; ultimately that collection of 18 blurry dots will become a focused image of a single star. Cooling of the telescope and instruments will also continue over the next month, with the near-infrared instruments ultimately reaching 37-39 kelvins."
 export default function HistoriaClinica(params){
     const [post, getPost] = useState([])
-    const url = 'http://localhost:4000/api/mascotas/listar'
+    const url = 'http://localhost:4000/api/mascotas'
     const fetchRegistros = () => {
         fetch(url)
         .then((res) => res.json())

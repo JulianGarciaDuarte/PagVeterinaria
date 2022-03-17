@@ -4,45 +4,45 @@ import 'bootstrap'
 export default function NavBar_M(){
     return(
 
-<nav class="navbar navbar-expand-sm navbar-light bg-lignt" id="nav_m">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-     <img src={logo4}  class="logo" />
+<nav className="navbar navbar-expand-sm navbar-light bg-lignt" id="nav_m">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="#">
+     <img src={logo4}  className="logo" />
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span className="navbar-toggler-icon"></span>
     </button>
     
     
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-       <li class="nav-item">
-      <a  class="nav-link" href="../index.html">INICIO</a>
+    <div className="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul className="navbar-nav">
+       <li className="nav-item">
+      <a  className="nav-link" href="../index.html">INICIO</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">PERFIL</a>
+    <li className="nav-item">
+      <a className="nav-link" href="#">PERFIL</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">CONTACTO</a>
+    <li className="nav-item">
+      <a className="nav-link" href="#">CONTACTO</a>
     </li>
 
-    <li class="nav-item dropdown ">
-      <a class="nav-link" href="#" >
+    <li className="nav-item dropdown ">
+      <a className="nav-link" href="#" >
         NOSOTROS
       </a>
-      <div class="dropdown-menu ms-auto">
-        <a class="dropdown-item" href="#">ESTERILIZACIÓN</a>
-        <a class="dropdown-item" href="#">VACUNACIÓN</a>
-        <a class="dropdown-item" href="#">CONSULTA</a>
+      <div className="dropdown-menu ms-auto">
+        <a className="dropdown-item" href="#">ESTERILIZACIÓN</a>
+        <a className="dropdown-item" href="#">VACUNACIÓN</a>
+        <a className="dropdown-item" href="#">CONSULTA</a>
       </div>
     </li>
 
- <li class="nav-item">
-    <a class="nav-link" href="#">SERVICIOS</a>
-      <div class="dropdown-menu ms-auto">
-        <a class="dropdown-item" href="#">ESTERILIZACIÓN</a>
-        <a class="dropdown-item" href="#">VACUNACIÓN</a>
-        <a class="dropdown-item" href="#">CONSULTA</a>
+ <li className="nav-item">
+    <a className="nav-link" href="#">SERVICIOS</a>
+      <div className="dropdown-menu ms-auto">
+        <a className="dropdown-item" href="#">ESTERILIZACIÓN</a>
+        <a className="dropdown-item" href="#">VACUNACIÓN</a>
+        <a className="dropdown-item" href="#">CONSULTA</a>
       </div>
     </li>
       </ul>

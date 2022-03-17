@@ -11,12 +11,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
+    <BrowserRouter>
     <AnunciosBar/>
     <NavBar/>
     <NavBar_M/>
-    <BrowserRouter>
     <Routes>
-    <Route path='/' element={<HistoriaClinica />}/>
+    <Route path='/HistoriaClinica' element={<HistoriaClinica/>}/>
     </Routes>
     </BrowserRouter>
     <Footer/>

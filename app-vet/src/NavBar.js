@@ -1,43 +1,44 @@
 import React from 'react'
 import logo4 from './imgs/Logo4.png'
 import 'bootstrap'
+import {Link} from 'react-router-dom'
 export default function NavBar(){
     return(
 
    
 
         <nav className="navbar navbar-expand-sm  sticky-top justify-content-center" id="nav_pc">
-        <a className="navbar-brand" href="">
+        <Link className="navbar-brand" to="/">
             <img src={logo4}  className="logo" />
-        </a>
+        </Link>
         <ul className="navbar-nav">
             <li className="nav-item">
-            <a  className="nav-link" href="../index.html">INICIO</a>
+            <Link  className="nav-link" to="/HistoriaClinica">INICIO</Link>
             </li>
             <li className="nav-item">
-            <a className="nav-link" href="#">PERFIL</a>
+            <Link className="nav-link" to="/">PERFIL</Link>
             </li>
             <li className="nav-item">
-            <a className="nav-link" href="#">CONTACTO</a>
+            <Link className="nav-link" to="/">CONTACTO</Link>
             </li>
 
             <li className="nav-item dropdown ">
-            <a className="nav-link" href="#" >
+            <Link className="nav-link" to="#" >
                 NOSOTROS
-            </a>
+            </Link>
             <div className="dropdown-menu ms-auto">
-                <a className="dropdown-item" href="#">ESTERILIZACIÓN</a>
-                <a className="dropdown-item" href="#">VACUNACIÓN</a>
-                <a className="dropdown-item" href="#">CONSULTA</a>
+                <Link className="dropdown-item" to="#">ESTERILIZACIÓN</Link>
+                <Link className="dropdown-item" to="#">VACUNACIÓN</Link>
+                <Link className="dropdown-item" to="#">CONSULTA</Link>
             </div>
             </li>
 
         <li className="nav-item">
-            <a className="nav-link" href="#">SERVICIOS</a>
+            <Link className="nav-link" to="#">SERVICIOS</Link>
             <div className="dropdown-menu ms-auto">
-                <a className="dropdown-item" href="#">ESTERILIZACIÓN</a>
-                <a className="dropdown-item" href="#">VACUNACIÓN</a>
-                <a className="dropdown-item" href="#">CONSULTA</a>
+                <Link className="dropdown-item" to="#">ESTERILIZACIÓN</Link>
+                <Link className="dropdown-item" to="#">VACUNACIÓN</Link>
+                <Link className="dropdown-item" to="#">CONSULTA</Link>
             </div>
             </li>
 

@@ -14,6 +14,7 @@ class Server{
         this.conectarDB();
         this.middlewares();
         this.path = {
+            auth:"/api/auth",
             mascotas:"/api/mascotas",
             historia:"/api/historia",
             tipo:"/api/tipoMascota"
@@ -26,6 +27,7 @@ class Server{
      * Método encargado de gestionar las rutas de la rest API
      */
     routes(){
+        this.app.use(this.path.auth , require('../routes/auth.routes'));
         this.app.use(this.path.mascotas, require('../routes/mascotas.routes'));
         this.app.use(this.path.historia, require('../routes/historia.routes'));
         this.app.use(this.path.tipo, require('../routes/tipo.routes'));

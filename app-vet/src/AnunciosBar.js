@@ -6,8 +6,8 @@ export default function AnunciosBar(){
 <div  id="Anucios">
 
 
-    <div class="col-md-4">
-      <div class="medio">
+    <div className="col-md-4">
+      <div className="medio">
         
           <img src={logo} id="logo"  align="middle" />
         

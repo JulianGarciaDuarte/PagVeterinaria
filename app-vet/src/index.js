@@ -9,18 +9,23 @@ import NavBar from './NavBar';
 import NavBar_M from './NavBar_M';
 import Footer from './Footer';
 import LogIn from './LogIn';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, matchRoutes, Route, Routes } from 'react-router-dom';
+
+
 
 ReactDOM.render(
+  
   <React.StrictMode>
+    {console.log("index", sessionStorage.getItem("usuario"))}
+    
     <BrowserRouter>
     <AnunciosBar/>
     <NavBar_M/>
     <NavBar/>
-    <NavBar_M/>
     <Routes>
+    <Route path='/Home' element={<Home/>}/>
     <Route path='/' element={<Home/>}/>
-    <Route path='/HistoriaClinica' element={<HistoriaClinica/>}/>
+    <Route path='/HistoriaClinica' element={<HistoriaClinica />}/>
     <Route path='/LogIn' element={<LogIn/>}/>
     </Routes>
     </BrowserRouter>
@@ -28,5 +33,7 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+
 
 

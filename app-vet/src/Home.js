@@ -9,15 +9,15 @@ import './css/estilos_PerfilM.css';
 
 export default function Home(){
     return(
-        <div class="container-fluid">
+        <div className="container-fluid">
         <div>
          <img id="index_4" src={index_4} />
 
        </div>
 
-   <div class="row">
-        <div class="col-md-4">
-				<div class="barraiz">
+   <div className="row">
+        <div className="col-md-4">
+				<div className="barraiz">
                 
                  <h5> <br/><br/> Quienes somos</h5>
                  
@@ -30,23 +30,23 @@ export default function Home(){
 
 
 
-            <div class="col-md-8">
-				<div class="barramedio">
-					<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" >
-						  <ol class="carousel-indicators" >
-						    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+            <div className="col-md-8">
+				<div className="barramedio">
+					<div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" >
+						  <ol className="carousel-indicators" >
+						    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active"></li>
 						    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
 						    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
 						  </ol>
-						  <div class="carousel-inner"  >
-						    <div class="carousel-item active" >
-						      <img id="imgI" src={index_1} class="d-block w-100" alt="..." />
+						  <div className="carousel-inner"  >
+						    <div className="carousel-item active" >
+						      <img id="imgI" src={index_1} className="d-block w-100" alt="..." />
 						  </div>
-						    <div class="carousel-item">
-						      <img id="imgI"src={index_2} class="d-block w-100" alt="..." />
+						    <div className="carousel-item">
+						      <img id="imgI"src={index_2} className="d-block w-100" alt="..." />
 						  	</div>
-						    <div class="carousel-item">
-						      <img id="imgI" src={index_3} class="d-block w-100" alt="..." />
+						    <div className="carousel-item">
+						      <img id="imgI" src={index_3} className="d-block w-100" alt="..." />
 						    </div>
   						</div>
   						

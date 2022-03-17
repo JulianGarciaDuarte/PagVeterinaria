@@ -54,6 +54,7 @@ body{
 @media screen and (max-width: 580px) {
     #nav_pc { display:none; }
     .main-container {flex-direction: column;}
+    .full-width{width: 100%;}
 }
 
 @media screen and (min-width: 580px) {
@@ -124,6 +125,7 @@ a.dropdown-item{
   display: block;
 }
 
+
 /*----------------------------------------------------------HOJA DE PERFIL-------------------------------------*/
 
 * {
@@ -140,7 +142,8 @@ body {
     background-color: #efefef;
     border: none;
     cursor: pointer;
-    transition: all 0.5s
+    transition: all 0.5s;
+    height: 460px;
 }
 
 .image img {
@@ -251,7 +254,9 @@ hr .new1 {
 
 
 /*----------------------------------------Historia Clinica----------------------------*/
-
+.full-width{
+    width: 67vw;
+}
 .right_sided{
     display: inline;
 }
@@ -277,12 +282,13 @@ hr .new1 {
     margin-bottom: 5px;
 }
 .outer-container{
-    width:auto;
+    width:100%;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 50px;
 }
 .inner-content{
+    width:100%;
     padding: 20px 20px 20px 20px;
     font-weight: lighter;
     background-color: lightgreen;
@@ -374,4 +380,41 @@ table thead{
     border-bottom: green solid 2px;
     background-color: lightgreen;
 
+}
+/*--------------------------------------------------LOGIN--------------------------*/
+.login-container{
+    width: 100vw;
+    height: 70vh;
+    background-image: url(../imgs/img_login.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0px;
+}
+
+.form-outer-container{
+    text-align: justify;
+    margin:auto;
+    background-color: red;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 10vw;
+    top: 40vh;
+    padding: 50px 30px 50px;
+    width: 250px;
+    background-color: rgb(0, 0, 0, 0.1);
+    border-radius: 25px;
+    border: 3px solid black;
+}
+.boton-aceptar{
+    color: white;
+    width: 120px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: rgb(67, 119, 233);
+}
+label{
+    border-radius: 25px;
 }
